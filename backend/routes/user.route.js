@@ -94,6 +94,8 @@ userRouter.post("/adminlogin",async(req,res)=>{
             })
         }
         else{
+
+            
             res.send("admin not find register first")
         }
     }

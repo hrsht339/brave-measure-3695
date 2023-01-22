@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div>
+            <a href="./index.html"><img src="./gadgethubcropped.jpg" alt=""> </a>
+            <!-- <button>Shop by Department</button>  -->
+            
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="./electronics.html">electronics</a>
+                    <a href="./jewel.html">jewelery</a>
+                    <a href="./men.html">men's clothing</a>
+                    <a href="./women.html">women's clothing</a>
+                </div>
+              </div>
+
+
+        </div>
+        <div>
+            <div class="pehla">
+                <a href="./admin.html">Admin</a>
+                <a href="./account.html">My Account</a>
+                <a href="">Customer Service</a>
+                <a onclick="cart()">Shopping cart</a>
+            </div>
+            <div class="pehlakebaad">
+                <h4></h4>
+            </div>
+            <div>
+                <input type="text" oninput="search()">
+                <button>Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav1">
+        <div class="nav4">
+            <div>
+                <label for="">Sort By: </label>
+                <select name="" id="sort" onchange="sort()">
+                    <option value="">select</option>
+                    <option value="low to high">low to high</option>
+                    <option value="high to low">high to low</option>
+                </select>
+            </div>
+    </div>
+
+    
+    <hr>
+
+    <div class="bhaag">
+        <div class="pehla">
+            <h3>Add Product</h3>
+            <form action="">
+                <label for="">Product Image</label>
+                <input type="text" id="image">
+                <label for="">Item Name</label>
+                <input type="text" id="name">
+                <label for="">Item Description</label>
+                <input type="text" id="des">
+
+                <select name="" id="type">
+                    <option value="men's clothing">men's clothing</option>
+                    <option value="women's clothing">women's clothing</option>
+                    <option value="jewelery">jewelery</option>
+                    <option value="electronics">electronics</option>
+                </select>
+
+                <label for="">Item Price</label>
+                <input type="nubmer" id="price">
+                <input type="submit" value="Submit">
+            </form>
+
+
+        </div>
+        <div class="dusra">
+            <h3>Recently Added</h3>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./adminadd.js"></script>

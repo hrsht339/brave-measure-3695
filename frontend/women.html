@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>women</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,10 +18,10 @@
             <div class="dropdown">
                 <button class="dropbtn">Dropdown</button>
                 <div class="dropdown-content">
-                    <a href="./electronics.html">electronics</a>
-                    <a href="./jewel.html">jewelery</a>
-                    <a href="./men.html">men's clothing</a>
-                    <a href="./women.html">women's clothing</a>
+                  <a href="./electronics.html">electronics</a>
+                  <a href="./jewel.html">jewelery</a>
+                  <a href="./men.html">men's clothing</a>
+                  <a href="./women.html">women's clothing</a>
                 </div>
               </div>
 
@@ -38,32 +38,36 @@
                 <h4></h4>
             </div>
             <div>
-                <input type="text">
+                <input type="text" oninput="search()">
                 <button>Search</button>
             </div>
         </div>
     </div>
 
-    <div class="nav4">
-        <h2>Total price- </h2>
-        <a href="payment.html">
-            <h2>Procced to Payment</h2>
-        </a>
+    <div class="nav1">
+        <div class="nav4">
+            <div>
+                <label for="">Sort By: </label>
+                <select name="" id="sort" onchange="sort()">
+                    <option value="">select</option>
+                    <option value="low to high">low to high</option>
+                    <option value="high to low">high to low</option>
+                </select>
+            </div>
     </div>
+
     <hr>
     <div class="main">
         <div class="category">
-            <a href="">NEW ARRIVALS</a><br>
-            <a href="">
-                <p>Current Week<p>
-            </a>
-            <a href="">Previous Weeks</a><br><br>
-            <a href="">Essentials</a><br><br>
-            <a href="">Tailoring Edit</a><br><br>
-            <a href="">Loungewear</a><br><br>
-            <a href="">Outdoor & Activewear</a><br><br>
-            <a href="">Cold Weather Edit</a><br><br>
-            <a href="">The Ski Edit</a><br><br>
+            <a href="men.html">NEW ARRIVALS</a><br>
+            <a href="women.html"><p>Current Week<p></a>
+            <a href="jewel.html">Previous Weeks</a><br><br>
+            <a href="men.html">Essentials</a><br><br>
+            <a href="women.html">Tailoring Edit</a><br><br>
+            <a href="jewel.html">Loungewear</a><br><br>
+            <a href="men.html">Outdoor & Activewear</a><br><br>
+            <a href="women.html">Cold Weather Edit</a><br><br>
+            <a href="jewel.html">The Ski Edit</a><br><br>
             <hr>
             <a href="">
                 <p>Category</p>
@@ -86,12 +90,16 @@
         </div>
     </div>
 
+
     <div class="footer">
         <img src="./footer.png" alt="">
 
     </div>
-
 </body>
 
+
+
 </html>
-<script src="./cart.js"></script>
+
+<script src="women.js"></script>
+<script src="./account.js"></script>

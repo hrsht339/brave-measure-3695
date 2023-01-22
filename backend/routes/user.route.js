@@ -41,7 +41,7 @@ userRouter.post("/login",async(req,res)=>{
             bcrypt.compare(pass,user.pass,async(err,result)=>{
                 if(result){
                     let token = jwt.sign({"id":user._id},"masai")
-                    res.send({"msg":"successfully logged in","token":token})
+                    res.send({"msg":"successfully logged in","token":token,"id":user._id,"email":email})
                 }
                 else{
                     res.send({"msg":"wrong password enter again"})
@@ -93,14 +93,14 @@ userRouter.post("/adminlogin",async(req,res)=>{
                 }
                 else{
                     
-                    res.send("wrong password enter again")
+                    res.send({"msg":"wrong password enter again"})
                 }
             })
         }
         else{
 
             
-            res.send("admin not find register first")
+            res.send({"msg":"admin not find register first"})
         }
     }
     catch(err){

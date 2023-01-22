@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart</title>
+    <title>Payment</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -38,12 +38,27 @@
                 <h4></h4>
             </div>
             <div>
-                <input type="text">
+                <input type="text" oninput="search()">
                 <button>Search</button>
             </div>
         </div>
     </div>
 
+    <div class="nav1">
+        <div class="nav4">
+            <div>
+                <label for="">Sort By: </label>
+                <select name="" id="sort" onchange="sort()">
+                    <option value="">select</option>
+                    <option value="low to high">low to high</option>
+                    <option value="high to low">high to low</option>
+                </select>
+            </div>
+    </div>
+
+    
+       <hr>
+    <hr>
     <div class="nav4">
         <h2>Total price- </h2>
         <a href="payment.html">
@@ -51,47 +66,37 @@
         </a>
     </div>
     <hr>
-    <div class="main">
-        <div class="category">
-            <a href="">NEW ARRIVALS</a><br>
-            <a href="">
-                <p>Current Week<p>
-            </a>
-            <a href="">Previous Weeks</a><br><br>
-            <a href="">Essentials</a><br><br>
-            <a href="">Tailoring Edit</a><br><br>
-            <a href="">Loungewear</a><br><br>
-            <a href="">Outdoor & Activewear</a><br><br>
-            <a href="">Cold Weather Edit</a><br><br>
-            <a href="">The Ski Edit</a><br><br>
-            <hr>
-            <a href="">
-                <p>Category</p>
-            </a>
-            <form action="">
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <label for="vehicle1"> Accessories</label><br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                <label for="vehicle2"> Bags</label><br>
-                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                <label for="vehicle3"> Clothing</label><br>
-                <input type="checkbox" value="vehicle4">
-                <label for="vehicle3"> Shoes</label><br>
-
-
-            </form>
+    <div class="dabba">
+        <h2>PAYMENT METHOD</h2>
+        <p>Please select your preferred payment method for this order.</p>
+        <hr>
+        <div class="inner-dabba">
+            <div>
+                <input type="radio" name="" id="">
+                <label for="">Card</label>
+                <p>Immediate Shipping</p>
+            </div>
+            <div>
+                <label for="">Name on card *</label>
+                <input type="text">
+                <label for="">Name on card *</label>
+                <input type="number">
+                <label for="">Expiration date *</label>
+                <input type="number">
+                <label for="">CVC / CVV *</label>
+                <input type="number">
+            </div>
         </div>
-        <div class="cards-men">
+        <hr>
+        <div class="button-dabba">
 
+            <button><a href="cart.html">BACK TO DELIVERY</a></button>
+            <button onclick="alerto()">PROCEED TO CHECKOUT</button>
         </div>
     </div>
 
-    <div class="footer">
-        <img src="./footer.png" alt="">
-
-    </div>
-
+    <img class="bottom-infos" src="bottom infos.png" alt="">
 </body>
 
 </html>
-<script src="./cart.js"></script>
+<script src="payment.js"></script>

@@ -2,8 +2,12 @@ const express = require("express")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const {userModel} = require("../models/user.model")
-
+var cors = require('cors')
 const userRouter = express.Router()
+
+
+ 
+userRouter.use(cors())
 
 userRouter.post("/register",async(req,res)=>{
     let {name,email,pass} = req.body
@@ -20,7 +24,7 @@ userRouter.post("/register",async(req,res)=>{
                     isAdmin:false
                 })
                 await user.save()
-                res.send("user has been registered")
+                res.send({"msg":"user has been registered"})
             }
         })
      }
@@ -40,12 +44,12 @@ userRouter.post("/login",async(req,res)=>{
                     res.send({"msg":"successfully logged in","token":token})
                 }
                 else{
-                    res.send("wrong password enter again")
+                    res.send({"msg":"wrong password enter again"})
                 }
             })
         }
         else{
-            res.send("user not find register first")
+            res.send({"msg":"user not find register first"})
         }
     }
     catch(err){
